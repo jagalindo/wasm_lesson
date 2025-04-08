@@ -34,7 +34,8 @@ jobs:
           mkdir -p public
           cp -r ejemplos public/ejemplos
           cp -r index.html README.md wasm-charla.md public/
-
+          cp -r assets public/assets
+      
       - name: Upload to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
