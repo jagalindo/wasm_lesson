@@ -1,11 +1,9 @@
----
 # WebAssembly  
 ### Más allá de JavaScript
 
 **José A. Galindo**  
 <small>Charla de 30 minutos</small>
 
----
 
 ## ¿Qué es WebAssembly?
 
@@ -23,11 +21,9 @@
 - Reutilización de librerías en C/C++, Rust, etc.
 - Ejecutar lenguajes no-JS en el navegador
 
----
 
 ## Arquitectura básica
 
-```text
 +----------------------+
 | .wasm binary module  |
 +----------------------+
@@ -41,7 +37,6 @@
 +----------------------+
 
 
----
 
 ## Ejemplo en WebAssembly Text (WAT)
 
@@ -54,7 +49,6 @@
 )
 ```
 
----
 
 ## Lenguajes que compilan a WASM
 
@@ -65,7 +59,6 @@
 - Python (con Pyodide)
 - Kotlin/Java (con WASM backend)
 
----
 
 ## C/C++ con Emscripten
 
@@ -83,7 +76,6 @@ Compilación:
 emcc add.c -s WASM=1 -Os -o add.wasm
 ```
 
----
 
 ## Rust con wasm-pack
 
@@ -102,7 +94,6 @@ Compilación:
 wasm-pack build --target web
 ```
 
----
 
 ## Python con Pyodide
 
@@ -120,7 +111,6 @@ wasm-pack build --target web
 </script>
 ```
 
----
 
 ## AssemblyScript (TypeScript para WASM)
 
@@ -137,7 +127,6 @@ Compilación:
 npx asc assembly/index.ts --outFile module.wasm --optimize
 ```
 
----
 
 ## Ejecución en navegador
 
@@ -145,7 +134,6 @@ npx asc assembly/index.ts --outFile module.wasm --optimize
 - Instanciar con `WebAssembly.instantiate`
 - Invocar funciones desde JS
 
----
 
 ## Casos de uso reales
 
@@ -154,7 +142,6 @@ npx asc assembly/index.ts --outFile module.wasm --optimize
 - **AutoCAD Web**: renderizado eficiente
 - Juegos 3D, editores de código (VS Code Web)
 
----
 
 ## ¿Cuándo usar WebAssembly?
 
@@ -163,7 +150,6 @@ npx asc assembly/index.ts --outFile module.wasm --optimize
 - Reutilización de código legacy
 - Para extender JS, no reemplazarlo
 
----
 
 ## Conclusiones
 
@@ -172,7 +158,6 @@ npx asc assembly/index.ts --outFile module.wasm --optimize
 - Rápido, seguro, portable
 - Ecosistema en crecimiento
 
----
 
 ## Recursos útiles
 
@@ -182,14 +167,9 @@ npx asc assembly/index.ts --outFile module.wasm --optimize
 - [https://rustwasm.github.io/wasm-pack](https://rustwasm.github.io/wasm-pack)
 - [https://github.com/AssemblyScript/assemblyscript](https://github.com/AssemblyScript/assemblyscript)
 
----
 
 <!-- _class: lead -->
 
 # ¡Gracias!
 
 <small>¿Preguntas?</small>
-```
-
----
-
