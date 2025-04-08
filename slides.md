@@ -17,7 +17,7 @@ layout: intro
 
 ---
 
-## ¿Qué es WebAssembly?
+# ¿Qué es WebAssembly?
 
 - Formato binario portable
 - Diseñado para navegadores modernos
@@ -26,7 +26,7 @@ layout: intro
 
 ---
 
-## ¿Por qué WebAssembly?
+# ¿Por qué WebAssembly?
 
 - Rendimiento cercano al nativo
 - Portabilidad de código existente
@@ -34,10 +34,8 @@ layout: intro
 - Ejecutar lenguajes no-JS en el navegador
 
 ---
-layout: center
----
 
-## Arquitectura básica
+# Arquitectura básica
 
 <div style="display: flex; align-items: center; gap: 2rem;">
   <img src="/assets/wasm.png" style="max-height: 50vh; width: auto;" />
@@ -51,7 +49,7 @@ layout: center
 
 ---
 
-## Ejemplo en WebAssembly Text (WAT)
+# Ejemplo en WebAssembly Text (WAT)
 
 ```plaintext
 (module
@@ -64,7 +62,7 @@ layout: center
 
 ---
 
-## Lenguajes que compilan a WASM
+# Lenguajes que compilan a WASM
 
 - C/C++ (Emscripten)
 - Rust (`wasm-pack`)
@@ -75,7 +73,7 @@ layout: center
 
 ---
 
-## C/C++ con Emscripten
+# C/C++ con Emscripten
 
 Código:
 
@@ -97,7 +95,7 @@ emcc add.c -s WASM=1 -Os -o add.wasm
 
 ---
 
-## Rust con wasm-pack
+# Rust con wasm-pack
 
 Código:
 
@@ -120,7 +118,7 @@ wasm-pack build --target web
 
 ---
 
-## Python con Pyodide
+# Python con Pyodide
 
 ```html
 <script src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
@@ -140,7 +138,7 @@ wasm-pack build --target web
 
 ---
 
-## AssemblyScript (TypeScript para WASM)
+# AssemblyScript (TypeScript para WASM)
 
 ```ts
 // assembly/index.ts
@@ -159,7 +157,7 @@ npx asc assembly/index.ts --outFile module.wasm --optimize
 
 ---
 
-## Ejecución en navegador
+# Ejecución en navegador
 
 - Cargar `.wasm` con `fetch()`
 - Instanciar con `WebAssembly.instantiate`
@@ -167,7 +165,7 @@ npx asc assembly/index.ts --outFile module.wasm --optimize
 
 ---
 
-## Casos de uso reales
+# Casos de uso reales
 
 - **Figma**: motor de render en WASM
 - **Photoshop Web**: portado con Emscripten
@@ -178,7 +176,7 @@ npx asc assembly/index.ts --outFile module.wasm --optimize
 
 ---
 
-## ¿Cuándo usar WebAssembly?
+# ¿Cuándo usar WebAssembly?
 
 - Operaciones pesadas (render, cálculo)
 - Compatibilidad con librerías nativas
@@ -187,7 +185,7 @@ npx asc assembly/index.ts --outFile module.wasm --optimize
 
 ---
 
-## Conclusiones
+# Conclusiones
 
 - WebAssembly está cambiando la web
 - Ejecuta código de cualquier lenguaje
@@ -196,18 +194,16 @@ npx asc assembly/index.ts --outFile module.wasm --optimize
 
 ---
 
-## Recursos útiles
+# Recursos útiles
 
 - [https://webassembly.org](https://webassembly.org)
 - [https://emscripten.org](https://emscripten.org)
 - [https://pyodide.org](https://pyodide.org)
 - [https://rustwasm.github.io/wasm-pack](https://rustwasm.github.io/wasm-pack)
 - [https://github.com/AssemblyScript/assemblyscript](https://github.com/AssemblyScript/assemblyscript)
+
 ---
-
-<!-- _class: lead -->
-
-
+layout: statement
+---
 # ¡Gracias!
 
-<small>¿Preguntas?</small>
