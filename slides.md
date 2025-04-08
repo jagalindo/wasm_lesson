@@ -35,7 +35,7 @@ layout: center
 ## Arquitectura básica
 
 <div style="display: flex; align-items: center; gap: 2rem;">
-  <img src="assets/wasm.png" style="max-height: 50vh; width: auto;" />
+  <img src="/assets/wasm.png" style="max-height: 50vh; width: auto;" />
 
   <div style="max-width: 50%;">
     <p><strong>.wasm binary module:</strong> Código compilado a WebAssembly.</p>
