@@ -4,6 +4,7 @@ theme: gaia
 paginate: true
 ---
 
+<!-- _class: lead -->
 # WebAssembly  
 ### Más allá de JavaScript
 
@@ -176,6 +177,7 @@ npx asc assembly/index.ts --outFile module.wasm --optimize
 ---
 
 <!-- _class: lead -->
+
 
 # ¡Gracias!
 
