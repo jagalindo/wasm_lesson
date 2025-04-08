@@ -10,7 +10,7 @@ paginate: true
 
 **José A. Galindo**  
 <small>Charla de 30 minutos</small>
-
+jagalindo@us.es
 ---
 
 ## ¿Qué es WebAssembly?
@@ -33,17 +33,7 @@ paginate: true
 
 ## Arquitectura básica
 
-+----------------------+
-| .wasm binary module  |
-+----------------------+
-          ↓
-+----------------------+
-|  JavaScript bridge   |
-+----------------------+
-          ↓
-+----------------------+
-|   WebAssembly VM     |
-+----------------------+
+![width:80%](assets/wasm.png)
 
 ---
 
