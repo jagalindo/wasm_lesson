@@ -83,6 +83,8 @@ Compilación:
 ```bash
 emcc add.c -s WASM=1 -Os -o add.wasm
 ```
+
+👉 [Ver ejemplo funcional](https://jagalindo.github.io/wasm_lesson/ejemplos/c_cpp/)
 ---
 
 ## Rust con wasm-pack
@@ -101,6 +103,7 @@ Compilación:
 ```bash
 wasm-pack build --target web
 ```
+👉 [Probar Rust + WebAssembly](https://jagalindo.github.io/wasm_lesson/ejemplos/rust/)
 ---
 
 ## Python con Pyodide
@@ -118,6 +121,7 @@ wasm-pack build --target web
   main();
 </script>
 ```
+👉 [Ejecutar código Python](https://jagalindo.github.io/wasm_lesson/ejemplos/pyodide/)
 ---
 
 ## AssemblyScript (TypeScript para WASM)
@@ -134,6 +138,7 @@ Compilación:
 ```bash
 npx asc assembly/index.ts --outFile module.wasm --optimize
 ```
+👉 [Probar AssemblyScript](https://jagalindo.github.io/wasm_lesson/ejemplos/assemblyscript/)
 ---
 
 ## Ejecución en navegador
@@ -148,6 +153,8 @@ npx asc assembly/index.ts --outFile module.wasm --optimize
 - **Figma**: motor de render en WASM
 - **Photoshop Web**: portado con Emscripten
 - **AutoCAD Web**: renderizado eficiente
+- **Doom**: https://diekmann.github.io/wasm-fizzbuzz/doom/
+- **flamapy.ide**: ide.flamapy.org
 - Juegos 3D, editores de código (VS Code Web)
 ---
 
