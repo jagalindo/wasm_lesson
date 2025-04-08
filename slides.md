@@ -1,5 +1,5 @@
 ---
-theme: excali-slide
+theme: apple-basic
 ---
 
 <!-- _class: lead -->

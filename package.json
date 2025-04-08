@@ -7,7 +7,6 @@
     "dev": "slidev"
   },
   "dependencies": {
-    "@slidev/cli": "^0.50.0",
-    "slidev-theme-excali-slide": "^1.0.0"
+    "@slidev/cli": "^0.50.0"
   }
 }
