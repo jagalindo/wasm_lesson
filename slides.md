@@ -10,8 +10,7 @@ layout: intro
 
 <div class="absolute bottom-10">
   <span class="font-700">
-	**José A. Galindo**
-	<small>Charla de 30 minutos</small>
+	<bold>José A. Galindo</bold>
 	jagalindo@us.es  
   </span>
 </div>
