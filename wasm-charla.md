@@ -3,7 +3,7 @@
 
 **José A. Galindo**  
 <small>Charla de 30 minutos</small>
-
+---
 
 ## ¿Qué es WebAssembly?
 
@@ -20,7 +20,7 @@
 - Portabilidad de código existente
 - Reutilización de librerías en C/C++, Rust, etc.
 - Ejecutar lenguajes no-JS en el navegador
-
+---
 
 ## Arquitectura básica
 
@@ -36,7 +36,7 @@
 |   WebAssembly VM     |
 +----------------------+
 
-
+---
 
 ## Ejemplo en WebAssembly Text (WAT)
 
@@ -48,7 +48,7 @@
     i32.add)
 )
 ```
-
+---
 
 ## Lenguajes que compilan a WASM
 
@@ -58,7 +58,7 @@
 - Go
 - Python (con Pyodide)
 - Kotlin/Java (con WASM backend)
-
+---
 
 ## C/C++ con Emscripten
 
@@ -69,13 +69,13 @@ int add(int a, int b) {
   return a + b;
 }
 ```
-
+---
 Compilación:
 
 ```bash
 emcc add.c -s WASM=1 -Os -o add.wasm
 ```
-
+---
 
 ## Rust con wasm-pack
 
@@ -87,13 +87,13 @@ pub fn greet(name: &str) -> String {
   format!("Hola, {}!", name)
 }
 ```
-
+---
 Compilación:
 
 ```bash
 wasm-pack build --target web
 ```
-
+---
 
 ## Python con Pyodide
 
@@ -110,7 +110,7 @@ wasm-pack build --target web
   main();
 </script>
 ```
-
+---
 
 ## AssemblyScript (TypeScript para WASM)
 
@@ -126,14 +126,14 @@ Compilación:
 ```bash
 npx asc assembly/index.ts --outFile module.wasm --optimize
 ```
-
+---
 
 ## Ejecución en navegador
 
 - Cargar `.wasm` con `fetch()`
 - Instanciar con `WebAssembly.instantiate`
 - Invocar funciones desde JS
-
+---
 
 ## Casos de uso reales
 
@@ -141,7 +141,7 @@ npx asc assembly/index.ts --outFile module.wasm --optimize
 - **Photoshop Web**: portado con Emscripten
 - **AutoCAD Web**: renderizado eficiente
 - Juegos 3D, editores de código (VS Code Web)
-
+---
 
 ## ¿Cuándo usar WebAssembly?
 
@@ -149,7 +149,7 @@ npx asc assembly/index.ts --outFile module.wasm --optimize
 - Compatibilidad con librerías nativas
 - Reutilización de código legacy
 - Para extender JS, no reemplazarlo
-
+---
 
 ## Conclusiones
 
@@ -157,7 +157,7 @@ npx asc assembly/index.ts --outFile module.wasm --optimize
 - Ejecuta código de cualquier lenguaje
 - Rápido, seguro, portable
 - Ecosistema en crecimiento
-
+---
 
 ## Recursos útiles
 
@@ -166,7 +166,7 @@ npx asc assembly/index.ts --outFile module.wasm --optimize
 - [https://pyodide.org](https://pyodide.org)
 - [https://rustwasm.github.io/wasm-pack](https://rustwasm.github.io/wasm-pack)
 - [https://github.com/AssemblyScript/assemblyscript](https://github.com/AssemblyScript/assemblyscript)
-
+---
 
 <!-- _class: lead -->
 
