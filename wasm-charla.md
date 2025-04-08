@@ -31,7 +31,6 @@ jagalindo@us.es
 - Ejecutar lenguajes no-JS en el navegador
 
 ---
-layout: center
 
 ## Arquitectura básica
 
