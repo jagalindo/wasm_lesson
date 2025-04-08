@@ -28,6 +28,7 @@ paginate: true
 - Portabilidad de código existente
 - Reutilización de librerías en C/C++, Rust, etc.
 - Ejecutar lenguajes no-JS en el navegador
+
 ---
 
 ## Arquitectura básica
@@ -56,6 +57,7 @@ paginate: true
     i32.add)
 )
 ```
+
 ---
 
 ## Lenguajes que compilan a WASM
@@ -66,6 +68,7 @@ paginate: true
 - Go
 - Python (con Pyodide)
 - Kotlin/Java (con WASM backend)
+
 ---
 
 ## C/C++ con Emscripten
@@ -77,7 +80,9 @@ int add(int a, int b) {
   return a + b;
 }
 ```
+
 ---
+
 Compilación:
 
 ```bash
@@ -85,6 +90,7 @@ emcc add.c -s WASM=1 -Os -o add.wasm
 ```
 
 👉 [Ver ejemplo funcional](https://jagalindo.github.io/wasm_lesson/ejemplos/c_cpp/)
+
 ---
 
 ## Rust con wasm-pack
@@ -97,13 +103,17 @@ pub fn greet(name: &str) -> String {
   format!("Hola, {}!", name)
 }
 ```
+
 ---
+
 Compilación:
 
 ```bash
 wasm-pack build --target web
 ```
+
 👉 [Probar Rust + WebAssembly](https://jagalindo.github.io/wasm_lesson/ejemplos/rust/)
+
 ---
 
 ## Python con Pyodide
@@ -121,7 +131,9 @@ wasm-pack build --target web
   main();
 </script>
 ```
+
 👉 [Ejecutar código Python](https://jagalindo.github.io/wasm_lesson/ejemplos/pyodide/)
+
 ---
 
 ## AssemblyScript (TypeScript para WASM)
@@ -138,7 +150,9 @@ Compilación:
 ```bash
 npx asc assembly/index.ts --outFile module.wasm --optimize
 ```
+
 👉 [Probar AssemblyScript](https://jagalindo.github.io/wasm_lesson/ejemplos/assemblyscript/)
+
 ---
 
 ## Ejecución en navegador
@@ -146,6 +160,7 @@ npx asc assembly/index.ts --outFile module.wasm --optimize
 - Cargar `.wasm` con `fetch()`
 - Instanciar con `WebAssembly.instantiate`
 - Invocar funciones desde JS
+
 ---
 
 ## Casos de uso reales
@@ -156,6 +171,7 @@ npx asc assembly/index.ts --outFile module.wasm --optimize
 - **Doom**: https://diekmann.github.io/wasm-fizzbuzz/doom/
 - **flamapy.ide**: ide.flamapy.org
 - Juegos 3D, editores de código (VS Code Web)
+
 ---
 
 ## ¿Cuándo usar WebAssembly?
@@ -164,6 +180,7 @@ npx asc assembly/index.ts --outFile module.wasm --optimize
 - Compatibilidad con librerías nativas
 - Reutilización de código legacy
 - Para extender JS, no reemplazarlo
+
 ---
 
 ## Conclusiones
@@ -172,6 +189,7 @@ npx asc assembly/index.ts --outFile module.wasm --optimize
 - Ejecuta código de cualquier lenguaje
 - Rápido, seguro, portable
 - Ecosistema en crecimiento
+
 ---
 
 ## Recursos útiles
