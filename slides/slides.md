@@ -1,7 +1,5 @@
 ---
-marp: true
-theme: gaia
-paginate: true
+theme: excali-slide
 ---
 
 <!-- _class: lead -->
