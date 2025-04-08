@@ -34,7 +34,7 @@ jagalindo@us.es
 
 ## Arquitectura básica
 
-![width:40%](assets/wasm.png)
+![width:45%](assets/wasm.png)
 
 ---
 
