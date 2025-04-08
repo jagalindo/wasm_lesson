@@ -1,17 +1,4 @@
-### 📄 `wasm-charla.md`
-
 ---
-marp: true
-theme: default
-paginate: true
-style: |
-  section {
-    font-size: 1.3em;
-  }
----
-
-<!-- _class: lead -->
-
 # WebAssembly  
 ### Más allá de JavaScript
 
