@@ -2,13 +2,19 @@
 theme: apple-basic
 ---
 
-<!-- _class: lead -->
+---
+layout: intro
+---
 # WebAssembly  
-### Más allá de JavaScript
+## Más allá de JavaScript
 
-**José A. Galindo**  
-<small>Charla de 30 minutos</small>
-jagalindo@us.es
+<div class="absolute bottom-10">
+  <span class="font-700">
+	**José A. Galindo**
+	<small>Charla de 30 minutos</small>
+	jagalindo@us.es  
+  </span>
+</div>
 
 ---
 
