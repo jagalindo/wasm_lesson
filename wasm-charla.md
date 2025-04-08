@@ -31,10 +31,11 @@ jagalindo@us.es
 - Ejecutar lenguajes no-JS en el navegador
 
 ---
+layout: center
 
 ## Arquitectura básica
 
-![width:50%](assets/wasm.png)
+![width:40%](assets/wasm.png)
 
 ---
 
