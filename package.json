@@ -1,0 +1,11 @@
+  "name": "wasm_lesson",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "slidev build",
+    "preview": "slidev preview",
+    "dev": "slidev"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.50.0"
+  }
+}
