@@ -48,7 +48,7 @@ layout: center
 
 ## Ejemplo en WebAssembly Text (WAT)
 
-```wat
+```plaintext
 (module
   (func (export "add") (param i32 i32) (result i32)
     local.get 0
