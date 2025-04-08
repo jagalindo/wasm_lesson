@@ -1,0 +1,43 @@
+name: Build and Deploy Marp Presentation
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Marp CLI
+        run: npm install -g @marp-team/marp-cli
+
+      - name: Build Marp presentation
+        run: |
+          marp wasm-charla.md --html --output index.html
+
+      - name: Copy other assets
+        run: |
+          mkdir -p public
+          cp -r ejemplos public/ejemplos
+          cp -r index.html README.md wasm-charla.md public/
+
+      - name: Upload to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+
