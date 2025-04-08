@@ -3,7 +3,7 @@ name: Build and Deploy Marp Presentation
 on:
   push:
     branches:
-      - main
+      - master
 
 permissions:
   contents: read
