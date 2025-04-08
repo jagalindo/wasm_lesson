@@ -1,8 +1,15 @@
+---
+marp: true
+theme: gaia
+paginate: true
+---
+
 # WebAssembly  
 ### Más allá de JavaScript
 
 **José A. Galindo**  
 <small>Charla de 30 minutos</small>
+
 ---
 
 ## ¿Qué es WebAssembly?
