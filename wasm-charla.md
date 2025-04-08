@@ -1,6 +1,5 @@
 ### 📄 `wasm-charla.md`
 
-```markdown
 ---
 marp: true
 theme: default
@@ -53,7 +52,7 @@ style: |
 +----------------------+
 |   WebAssembly VM     |
 +----------------------+
-```
+
 
 ---
 
