@@ -34,7 +34,7 @@ jagalindo@us.es
 
 ## Arquitectura básica
 
-![height:90vh](assets/wasm.png)
+<img src="assets/wasm.png" style="max-height: 85vh; max-width: 100%;" />
 
 ---
 
