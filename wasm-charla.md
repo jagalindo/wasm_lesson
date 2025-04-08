@@ -34,9 +34,7 @@ jagalindo@us.es
 
 ## Arquitectura básica
 
-<div style="display: flex; justify-content: center; align-items: center;">
-  <img src="assets/wasm.png" style="max-width: 70%;">
-</div>
+![height:90vh](assets/wasm.png)
 
 ---
 
