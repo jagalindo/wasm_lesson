@@ -31,10 +31,20 @@ jagalindo@us.es
 - Ejecutar lenguajes no-JS en el navegador
 
 ---
+layout: center
+---
 
 ## Arquitectura básica
 
-<img src="assets/wasm.png" style="max-height: 85vh; max-width: 100%;" />
+<div style="display: flex; align-items: center; gap: 2rem;">
+  <img src="assets/wasm.png" style="max-height: 60vh; width: auto;" />
+
+  <div style="max-width: 40%;">
+    <p><strong>.wasm binary module:</strong> Código compilado a WebAssembly.</p>
+    <p><strong>JavaScript bridge:</strong> Interfaz que conecta el código WASM con la web.</p>
+    <p><strong>WebAssembly VM:</strong> Entorno de ejecución dentro del navegador.</p>
+  </div>
+</div>
 
 ---
 
