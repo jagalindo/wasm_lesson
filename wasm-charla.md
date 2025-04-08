@@ -11,6 +11,7 @@ paginate: true
 **José A. Galindo**  
 <small>Charla de 30 minutos</small>
 jagalindo@us.es
+
 ---
 
 ## ¿Qué es WebAssembly?
@@ -33,7 +34,9 @@ jagalindo@us.es
 
 ## Arquitectura básica
 
-![width:80%](assets/wasm.png)
+<div style="display: flex; justify-content: center; align-items: center;">
+  <img src="assets/wasm.png" style="max-width: 70%;">
+</div>
 
 ---
 
