@@ -54,7 +54,7 @@ mermaid: true
 
 # Arquitectura WASM
 
-## Ejecución en navegador
+### Que queremos hacer
 
 - Preparar binarios .wasm
 - Cargar `.wasm` con `fetch()`
