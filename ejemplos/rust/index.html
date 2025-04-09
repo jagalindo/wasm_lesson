@@ -9,7 +9,7 @@
   <p>Resultado: <span id="res">---</span></p>
 
   <script type="module">
-    import init, {{ add }} from "./pkg/wasm_ejemplo.js";
+    import init, { add } from "./pkg/wasm_rust.js";
 
     init().then(() => {
       const resultado = add(2, 3);
