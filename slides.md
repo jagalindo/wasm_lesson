@@ -46,12 +46,20 @@ image: '/assets/js-smell.png'
 - Reutilización de librerías en C/C++, Rust, etc.
 - Ejecutar lenguajes no-JS en el navegador
 
+
 ---
 layout: two-cols-header
 mermaid: true
 ---
 
 # Arquitectura WASM
+
+## Ejecución en navegador
+
+- Preparar binarios .wasm
+- Cargar `.wasm` con `fetch()`
+- Instanciar con `WebAssembly.instantiate`
+- Invocar funciones desde JS
 
 ::left::
 
@@ -94,14 +102,6 @@ Este módulo define una función llamada add que suma dos enteros de 32 bits.
 - Probemoslo: https://webassembly.github.io/wabt/demo/
 - Información: https://github.com/WebAssembly/wabt
 
-<!--
--->
--->
-
-<!--
-test
--->
-
 ---
 
 # Lenguajes que compilan a WASM
@@ -125,15 +125,13 @@ int add(int a, int b) {
 }
 ```
 
----
-
 Compilar a .wasm + glue JavaScript:
 
 ```bash
 emcc add.c -Os -s WASM=1 -s EXPORTED_FUNCTIONS='["_add"]' -s EXPORTED_RUNTIME_METHODS='["cwrap", "ccall"]' -o add.js
 ```
 
-👉 [Ver ejemplo funcional](/ejemplos/c_cpp/index.html)
+👉 [Ver ejemplo funcional](https://jagalindo.github.io/wasm_lesson/ejemplos/c_cpp/index.html)
 
 <!-- Install emscriptemn
 git clone https://github.com/emscripten-core/emsdk.git
@@ -155,10 +153,7 @@ pub fn greet(name: &str) -> String {
 }
 ```
 
----
-
 Compilación:
-
 ```bash
 wasm-pack build --target web
 ```
@@ -169,6 +164,9 @@ wasm-pack build --target web
 
 # Python con Pyodide
 
+Cuando ejecutamos código Python, necesitamos una compilación intermedia a las primitivas de C. 
+De eso se encarga el proyecto Pyodide, originalmente funaddo por mozzila. 
+Esta es la idea:
 ```html
 <script src="https://cdn.jsdelivr.net/pyodide/v0.23.0/full/pyodide.js"></script>
 <script>
@@ -187,40 +185,13 @@ wasm-pack build --target web
 
 ---
 
-# AssemblyScript (TypeScript para WASM)
-
-```ts
-// assembly/index.ts
-export function square(x: i32): i32 {
-  return x * x;
-}
-```
-
-Compilación:
-
-```bash
-npx asc assembly/index.ts --outFile module.wasm --optimize
-```
-
-👉 [Probar AssemblyScript](https://jagalindo.github.io/wasm_lesson/ejemplos/assemblyscript/)
-
----
-
-# Ejecución en navegador
-
-- Cargar `.wasm` con `fetch()`
-- Instanciar con `WebAssembly.instantiate`
-- Invocar funciones desde JS
-
----
-
 # Casos de uso reales
 
 - **Figma**: motor de render en WASM
 - **Photoshop Web**: portado con Emscripten
 - **AutoCAD Web**: renderizado eficiente
 - **Doom**: https://diekmann.github.io/wasm-fizzbuzz/doom/
-- **flamapy.ide**: ide.flamapy.org
+- **flamapy.ide**: https://ide.flamapy.org
 - Juegos 3D, editores de código (VS Code Web)
 
 ---

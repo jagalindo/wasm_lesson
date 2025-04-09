@@ -1,1 +1,45 @@
-<!-- Ejemplo en Python con Pyodide -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ejemplo Pyodide</title>
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 1rem;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejecutando Python en el navegador con Pyodide</h1>
+
+  <p>
+    Ejecutaremos un pequeño script en Python que calcula <code>sin(π / 2)</code> con NumPy:
+  </p>
+
+  <pre id="output">Cargando Pyodide...</pre>
+
+  <script>
+    async function main() {
+      const pyodide = await loadPyodide();
+      await pyodide.loadPackage("numpy");
+
+      const result = await pyodide.runPythonAsync(`
+        import numpy as np
+        f = np.sin(np.pi / 2)
+        f
+      `);
+
+      document.getElementById("output").textContent = `Resultado: ${result}`;
+    }
+
+    main();
+  </script>
+</body>
+</html>
