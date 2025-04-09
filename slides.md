@@ -1,12 +1,15 @@
 ---
 theme: apple-basic
+mermaid: true
+addons:
+  - slidev-component-spotlight
 ---
 
 ---
 layout: intro
 ---
 # WebAssembly  
-## Más allá de JavaScript
+## El navegador más allá de JavaScript
 
 <div class="absolute bottom-10">
   <span class="font-700">
@@ -24,6 +27,16 @@ layout: intro
 - Seguro, eficiente, multiplataforma
 - Complementa a JavaScript
 
+## Lo que **no** es WebAssembly
+
+- ❌ Un reemplazo de JavaScript  
+- ❌ Un lenguaje que escribes a mano  
+- ❌ Inseguro o sin control  
+- ❌ Difícil de integrar
+
+---
+layout: image-right
+image: '/assets/js-smell.png'
 ---
 
 # ¿Por qué WebAssembly?
@@ -34,22 +47,39 @@ layout: intro
 - Ejecutar lenguajes no-JS en el navegador
 
 ---
+layout: two-cols-header
+mermaid: true
+---
 
-# Arquitectura básica
+# Arquitectura WASM
 
-<div style="display: flex; align-items: center; gap: 2rem;">
-  <img src="/assets/wasm.png" style="max-height: 50vh; width: auto;" />
+::left::
 
-  <div style="max-width: 50%;">
-    <p><strong>.wasm binary module:</strong> Código compilado a WebAssembly.</p>
-    <p><strong>JavaScript bridge:</strong> Interfaz que conecta el código WASM con la web.</p>
-    <p><strong>WebAssembly VM:</strong> Entorno de ejecución dentro del navegador.</p>
-  </div>
-</div>
+- Código `.wasm` compilado desde C, Rust...
+- Puente JavaScript para comunicación.
+- Máquina virtual WASM en el navegador.
+
+::right::
+
+
+```mermaid
+graph TD
+  A[.wasm binary module] --> B[JavaScript bridge]
+  B --> C[WebAssembly VM]
+```
 
 ---
 
 # Ejemplo en WebAssembly Text (WAT)
+<SlidevSpotlight/>
+WAT (WebAssembly Text format) es la representación textual legible por humanos del código WebAssembly, que normalmente se guarda en formato binario .wasm.
+Se usa principalmente para:
+
+ - Escribir manualmente pequeños módulos.
+ - Depurar o inspeccionar el contenido de un .wasm.
+ - Aprender cómo funciona WebAssembly a bajo nivel.
+
+Ejemplo:
 
 ```plaintext
 (module
@@ -59,6 +89,18 @@ layout: intro
     i32.add)
 )
 ```
+Este módulo define una función llamada add que suma dos enteros de 32 bits.
+
+- Probemoslo: https://webassembly.github.io/wabt/demo/
+- Información: https://github.com/WebAssembly/wabt
+
+<!--
+-->
+-->
+
+<!--
+test
+-->
 
 ---
 
@@ -85,14 +127,21 @@ int add(int a, int b) {
 
 ---
 
-Compilación:
+Compilar a .wasm + glue JavaScript:
 
 ```bash
-emcc add.c -s WASM=1 -Os -o add.wasm
+emcc add.c -Os -s WASM=1 -s EXPORTED_FUNCTIONS='["_add"]' -s EXPORTED_RUNTIME_METHODS='["cwrap", "ccall"]' -o add.js
 ```
 
-👉 [Ver ejemplo funcional](https://jagalindo.github.io/wasm_lesson/ejemplos/c_cpp/)
+👉 [Ver ejemplo funcional](/ejemplos/c_cpp/index.html)
 
+<!-- Install emscriptemn
+git clone https://github.com/emscripten-core/emsdk.git
+cd emsdk
+./emsdk install latest
+./emsdk activate latest
+source ./emsdk_env.sh
+-->
 ---
 
 # Rust con wasm-pack
@@ -206,4 +255,3 @@ npx asc assembly/index.ts --outFile module.wasm --optimize
 layout: statement
 ---
 # ¡Gracias!
-

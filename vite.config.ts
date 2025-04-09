@@ -1,7 +1,7 @@
 // vite.config.ts
 import { defineConfig } from 'vite'
 
-export default defineConfig({
-  base: '/wasm_lesson/'
-})
+export default defineConfig(({ mode }) => ({
+  base: mode === 'production' ? '/wasm_lesson/' : '/',
+}))
 
